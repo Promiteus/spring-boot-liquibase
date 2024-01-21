@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: authors-change-id-type
+      author: Roman M
+      changes:
+        - modifyDataType:
+            tableName: authors
+            columnName: id
+            newDataType: varchar(255)
+        - modifyDataType:
+            tableName: authors
+            columnName: user_id
+            newDataType: varchar(255)

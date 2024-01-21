@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user #текстовый идентификатор (Обязателен)
+      author: Roman M # автор (Обязателен)
+      changes:
+        - createTable: # создаем новую таблицу
+            tableName: users
+            columns: # объявления колонок
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: login
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
